@@ -1,0 +1,28 @@
+{
+    "name": "pc-brainy/yii2-uploader",
+    "description": "Images uploader",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "matricks",
+            "email": "matricks@webspider.ro"
+        }
+    ],
+    "repositories":[
+        {
+            "type":"git",
+            "url":"https://github.com/pc-brainy/yii2-uploader"
+        }
+        ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "yiisoft/yii2-bootstrap": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "brainy\\uploader\\": ""
+        }
+    }
+}
