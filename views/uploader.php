@@ -3,8 +3,6 @@ use yii\bootstrap\Modal;
 use kartik\file\FileInput;
 use yii\helpers\Html;
 use brainy\UploadController;
-    
-Yii::$app->h->pre($pluginOptions);
 
     if($modal){
         Modal::begin([
@@ -16,12 +14,12 @@ Yii::$app->h->pre($pluginOptions);
     }
 
     echo FileInput::widget([
-        'model' => new $model[0],
-        'attribute' => $model[1],
+        'model' => $model,
+        'attribute' => $attribute,
         'options' => $options,
         'pluginOptions' => $pluginOptions,
     ]);
-    
+
     if($modal){
         Modal::end();
     }

@@ -3,7 +3,7 @@ namespace brainy\uploader\models;
  
 use yii\db\ActiveRecord;
 
-class Photo extends ActiveRecord
+class Photo extends \yii\base\Model
 {
     public $image;
  

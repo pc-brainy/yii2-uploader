@@ -18,7 +18,9 @@
         ],
     "require": {
         "yiisoft/yii2": "*",
-        "yiisoft/yii2-bootstrap": "*"
+        "yiisoft/yii2-bootstrap": "*",
+        "kartik-v/yii2-widget-fileinput": "@dev",
+        "imagine/imagine": "0.5.*"
     },
     "autoload": {
         "psr-4": {
