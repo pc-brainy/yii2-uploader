@@ -22,7 +22,12 @@ class UploaderController extends Controller
 
             $this->file = \yii\web\UploadedFile::getInstance($model, $attribute);
             $this->isImage = getimagesize($this->file->tempName);
-            $this->setFilename($post);
+            
+            $this->filename = $this->file->name;
+            
+            if(isset($post['filename'])){
+                $this->setFilename($post);
+            }
 
             //prevent retry to upload  
             if($this->file == null){
