@@ -94,7 +94,6 @@ class UploaderController extends Controller
     }
 
     protected function save($size, $pathToSave){
-        $imagine = new \Imagine\Imagick\Imagine();
         if(!$this->isImage){
             return $this->file->saveAs($pathToSave);
         }else{
