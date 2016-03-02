@@ -1,6 +1,9 @@
 <?php
 namespace brainy\uploader\controllers;
 
+use Imagine\Image\Box;
+use Imagine\Image\ImageInterface;
+use Imagine\Image\ImagineInterface;
 use Yii;
 use yii\web\Controller;
 use yii\web\UploadedFile;
@@ -91,10 +94,14 @@ class UploaderController extends Controller
     }
 
     protected function save($size, $pathToSave){
+        $imagine = new \Imagine\Imagick\Imagine();
         if(!$this->isImage){
             return $this->file->saveAs($pathToSave);
         }else{
-            return Image::thumbnail($this->file->tempName, $size[0], $size[1])->save($pathToSave);
+            return Image::getImagine()->open($this->file->tempName)
+                ->thumbnail(new Box($size[0], $size[1]), ImageInterface::THUMBNAIL_OUTBOUND)
+                ->save($pathToSave);
+//            return Image::thumbnail($this->file->tempName, $size[0], $size[1])->save($pathToSave);
         }
     }
 
