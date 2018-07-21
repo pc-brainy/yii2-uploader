@@ -8,12 +8,12 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require pc-brainy/yii2-uploader:~1.0
+composer require pc-brainy/yii2-uploader "dev-master"
 ```
 or add
 
 ```json
-"pc-brainy/yii2-uploader" : "~1.0"
+"pc-brainy/yii2-uploader" : "dev-master"
 ```
 
 to the require section of your application's `composer.json` file.    
