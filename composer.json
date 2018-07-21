@@ -20,7 +20,8 @@
         "yiisoft/yii2": "*",
         "yiisoft/yii2-bootstrap": "*",
         "kartik-v/yii2-widget-fileinput": "@dev",
-        "imagine/imagine": "0.5.*"
+        "imagine/imagine": "0.5.*",
+        "yiisoft/yii2-imagine": "*"
     },
     "autoload": {
         "psr-4": {
