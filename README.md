@@ -48,6 +48,10 @@ with parameters
     echo Uploader::widget([
         'model'=>["\brainy\uploader\models\Photo", "image"],
         'modal'=>true,
+        'options' => [
+            'multiple' => true,
+            'accept' => 'image/*',
+        ],
         'pluginOptions' => [
             'uploadExtraData'=>[
                     'thumbnailSize'=>[320, 200],
