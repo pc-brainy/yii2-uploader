@@ -70,7 +70,7 @@ class UploaderController extends Controller
             }
         }
 
-        return Json::encode($model);
+        return Json::encode(['folder'=>$this->folder(), 'filename'=>$this->filename]);
     }
 
     /**
