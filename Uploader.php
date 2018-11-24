@@ -19,7 +19,8 @@ class Uploader extends Widget{
     public $options;
     public $pluginOptions;
     public $lengthOfName = 237;
-        
+    public $pluginEvents;
+
     public function init(){
         parent::init();
         $this->model = isset($this->model) ? $this->model : new \brainy\uploader\models\Photo;
@@ -59,6 +60,7 @@ class Uploader extends Widget{
             'modal'=>$this->modal,
             'options'=>$this->options,
             'pluginOptions'=>$this->pluginOptions,
+            'pluginEvents'=>$this->pluginEvents,
         ]);
     }
   
