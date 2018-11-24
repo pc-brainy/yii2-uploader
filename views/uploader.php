@@ -18,6 +18,7 @@ use brainy\UploadController;
         'attribute' => $attribute,
         'options' => $options,
         'pluginOptions' => $pluginOptions,
+        'pluginEvents' => $pluginEvents,
     ]);
 
     if($modal){
